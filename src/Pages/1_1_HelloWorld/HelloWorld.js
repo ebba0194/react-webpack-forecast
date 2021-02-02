@@ -1,8 +1,8 @@
 import React from 'react';
 
 const HelloWorld = () => (
-    <div className="pt-8 text-darkLiver container mx-auto max-w-3xl pb-32">
-        <h1 className="text-6xl md:text-7xl text-raisinBlack font-semibold pb-8">1.1: Hello World</h1>
+    <div className="pt-8 text-darkLiver container mx-auto max-w-3xl pb-32 px-4 break-words">
+        <h1 className="text-6xl text-center md:text-7xl text-raisinBlack font-semibold pb-8">1.1: Hello World</h1>
         <p className="pb-4 text-2xl font-bold">
             For our first trick, we'll create a simple, minimal React setup using Webpack. (We'll add Tailwind.css too, for ease of styling.)
         </p>
