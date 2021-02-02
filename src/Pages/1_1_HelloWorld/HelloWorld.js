@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HelloWorld = () => (
-    <div className="pt-8 text-darkLiver container mx-auto max-w-3xl p-4">
+    <div className="pt-8 text-darkLiver container mx-auto max-w-3xl pb-32">
         <h1 className="text-6xl md:text-7xl text-raisinBlack font-semibold pb-8">1.1: Hello World</h1>
         <p className="pb-4 text-2xl font-bold">
             For our first trick, we'll create a simple, minimal React setup using Webpack. (We'll add Tailwind.css too, for ease of styling.)
@@ -665,6 +665,31 @@ const HelloWorld = () => (
                 </div>
             </div>
         </div>
+        <h3 className="text-3xl semibold text-raisinBlack pt-8">Challenge: </h3>
+        <p className="py-4">
+            Edit the source code in 
+            &nbsp;
+                <code className="bg-ecru">
+                index.js
+                </code>
+            &nbsp;
+            to contain:
+        </p>
+        <ul className="list-disc p-4 pt-0">
+            <li>An h1 that says "Hello World!"</li>
+            <li>A picture of your choice.</li>
+            <li>A little paragraph about something you want to say.</li>
+            <li>
+                A background or text color set with
+                &nbsp;
+                <code className="bg-ecru">
+                Tailwind
+                </code>
+                &nbsp;
+                utility classes.
+            </li>
+        </ul>
+        <a href="https://tailwindcss.com/" className="py-4 text-dodgerBlue">Read up on Tailwind here </a>
     </div>
 );
 
