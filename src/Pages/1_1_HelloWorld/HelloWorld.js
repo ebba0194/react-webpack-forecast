@@ -29,7 +29,7 @@ const HelloWorld = () => (
         <p className="py-4 italic text-sm">
             A lot of the following was borrowed from a helpful guide found at
             &nbsp;
-            <a className="text-dodgerBlue" href="https://blog.logrocket.com/webpack-from-scratch-for-tailwind-css-with-react/">the LogRocket Blog</a>
+            <a rel="noopenner noreferrer" target="_blank" className="text-dodgerBlue" href="https://blog.logrocket.com/webpack-from-scratch-for-tailwind-css-with-react/">the LogRocket Blog</a>
             .
         </p>
         <h3 className="text-3xl semibold text-raisinBlack pt-4">Install Webpack</h3>
@@ -88,7 +88,7 @@ const HelloWorld = () => (
         <p className="py-4">
             Now, we need Webpack, our handy-dandy <span className="italic">static module-bundler</span>.
             If Webpack is new to you, I suggest taking at least a cursory look at
-            <a className="text-dodgerBlue" href="https://webpack.js.org/concepts/"> what they've got going on</a>
+            <a rel="noopenner noreferrer" target="_blank" className="text-dodgerBlue" href="https://webpack.js.org/concepts/"> what they've got going on</a>
             .
         </p>
         <p className="py-4">
@@ -689,7 +689,7 @@ const HelloWorld = () => (
                 utility classes.
             </li>
         </ul>
-        <a href="https://tailwindcss.com/" className="py-4 text-dodgerBlue">Read up on Tailwind here </a>
+        <a rel="noopenner noreferrer" target="_blank" href="https://tailwindcss.com/" className="py-4 text-dodgerBlue">Read up on Tailwind here </a>
     </div>
 );
 
