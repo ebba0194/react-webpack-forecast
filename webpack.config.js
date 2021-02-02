@@ -36,7 +36,7 @@ module.exports = {
             chunkFilename: "styles.css"
         }),
         new HtmlWebPackPlugin({
-            template: "./public/index.html",
+            template: "./index.html",
             filename: "./index.html"
         })
     ]
