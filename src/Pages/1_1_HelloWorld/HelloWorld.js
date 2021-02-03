@@ -13,7 +13,7 @@ const HelloWorld = () => (
             <li>webpack 5</li>
             <li>webpack-bundle-analyzer</li>
             <li>webpack-dev-server</li>
-            <li>React 16</li>
+            <li>React 17</li>
             <li>React DOM</li>
             <li>Tailwind CSS</li>
             <li>autoprefixer (required for Tailwind CSS)</li>
@@ -717,7 +717,47 @@ const HelloWorld = () => (
                 utility classes.
             </li>
         </ul>
-        <a rel="noopenner noreferrer" target="_blank" href="https://tailwindcss.com/" className="py-4 text-dodgerBlue">Read up on Tailwind here </a>
+        <p className="p-8 bg-ecru text-white rounded block">
+            Note: Remember to use
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            className
+            </code>
+            &nbsp;
+            rather than 
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            class
+            </code>
+            &nbsp;
+            to apply classes to your JSX components! We do this because
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            class
+            </code>
+            &nbsp;
+            is a JavaScript keyword. All JSX gets compiled into vanilla JavaScript, and if you wrote
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            class
+            </code>
+            &nbsp;
+            the compiler would try to make a JavaScript
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            class
+            </code>
+            &nbsp;
+            rather than an element that 
+            <span className="italic"> has </span>
+            a 
+            &nbsp;
+            <code className="bg-white text-raisinBlack">
+            class
+            </code>
+            .
+        </p>
+        <a rel="noopenner noreferrer" target="_blank" href="https://tailwindcss.com/" className="py-4 block text-dodgerBlue">Read up on Tailwind here </a>
         <p className="py-4">
             Here's my "Hello World" 😸: 
         </p>
