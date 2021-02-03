@@ -123,12 +123,12 @@ const HelloWorld = () => (
             </code>
             's 
             &nbsp;
-            <code className="bg-ecru">script</code>
+            <code className="bg-ecru">scripts</code>
             &nbsp;
             section to look like this:</li>
         </ul>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
-            {`"scripts: {`}
+            {`"scripts": {`}
                 <div className="px-4">
                     "start": "webpack --mode development",
                     <br />
@@ -175,7 +175,7 @@ const HelloWorld = () => (
             file, add the following:
         </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
-            {`"scripts: {`}
+            {`{`}
                 <div className="px-4">
                     "presets": ["@babel/preset-env", "@babel/preset-react"]
                 </div>
@@ -247,19 +247,40 @@ const HelloWorld = () => (
             and use this in our webpack config file. It will generate an HTML file for your application, or you can provide a template. It also minifies the file.
         </p>
         <p className="py-4">
+            While we're doing that, we'll tell Webpack to process our
+            &nbsp;
+            <code className="bg-ecru">
+            .js
+            </code>
+            &nbsp;
+            with
+            &nbsp;
+            <code className="bg-ecru">
+            babel-loader
+            </code>
+            &nbsp;,
+            so that our React code in those
+            &nbsp;
+            <code className="bg-ecru">
+            .js
+            </code>
+            &nbsp;
+            files gets transpiled.
+        </p>
+        <p className="py-4">
             In your terminal, type:
         </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             npm i html-webpack-plugin -D
         </code>
         <p className="py-4">
-            We'll also have to update our Webpack configuration at 
+            Create a
             &nbsp;
             <code className="bg-ecru">
             webpack.config.js
             </code>
             &nbsp;
-            :
+            file in the root of your project, and add in this stuff:
         </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             {`const HtmlWebPackPlugin = require("html-webpack-plugin");`}
@@ -313,7 +334,7 @@ const HelloWorld = () => (
             {`filename: "./index.html"`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`});`}
+            {`})`}
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             {`]`}
@@ -352,9 +373,9 @@ const HelloWorld = () => (
             for development.
         </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
-            {`"scripts: {`}
+            {`"scripts": {`}
                 <div className="px-4">
-                    "start": "webpack-dev-server --mode development",
+                    "start": "webpack serve --mode development",
                     <br />
                     "build": "webpack --mode production"
                     <br />
@@ -521,7 +542,7 @@ const HelloWorld = () => (
             {`test: /\.css$/,`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`use: {`}
+            {`use: [`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {`MiniCssExtractPlugin.loader,`}
@@ -530,7 +551,7 @@ const HelloWorld = () => (
             {`"css-loader", "postcss-loader",`}
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`}`}
+            {`]`}
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {`}`}
