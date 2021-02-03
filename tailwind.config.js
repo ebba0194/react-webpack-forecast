@@ -10,7 +10,8 @@ module.exports = {
       darkLiver: '#564E58',
       isabelline: '#F2EFE9',
       raisinBlack: '#252627',
-      dodgerBlue: '#0496FF'
+      dodgerBlue: '#0496FF',
+      white: '#ffffff'
     },
     textColor: theme => theme('colors'),
     extend: {},
