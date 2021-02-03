@@ -107,13 +107,25 @@ const HelloWorld = () => (
             Now we need to create an entry point for our app (page loaded when the app starts up). To do that:
         </p>
         <ul className="list-disc p-4 pt-0">
-            <li>Create a src folder and create an index.js file inside it.</li>
+            <li>Create a 
+            &nbsp;
+            <code className="bg-ecru">src</code>
+            &nbsp;
+            folder and create an
+            &nbsp;
+            <code className="bg-ecru">index.js</code>
+            &nbsp;
+            file inside it.</li>
             <li>Update your
             &nbsp; 
             <code className="bg-ecru">
-                package.json
+            package.json
             </code>
-            's script section to look like this:</li>
+            's 
+            &nbsp;
+            <code className="bg-ecru">script</code>
+            &nbsp;
+            section to look like this:</li>
         </ul>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             {`"scripts: {`}
