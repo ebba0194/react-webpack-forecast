@@ -1,20 +1,19 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      // Build your palette here
-      transparent: 'transparent',
-      current: 'currentColor',
-      ecru: '#BFB48F',
-      darkLiver: '#564E58',
-      isabelline: '#F2EFE9',
-      raisinBlack: '#252627',
-      dodgerBlue: '#0496FF',
-      white: '#ffffff'
-    },
-    textColor: theme => theme('colors'),
-    extend: {},
+    extend: {
+      colors: {
+        // Build your palette here
+        ecru: '#BFB48F',
+        darkLiver: '#564E58',
+        isabelline: '#F2EFE9',
+        raisinBlack: '#252627',
+        dodgerBlue: '#0496FF'
+      }
+    }
   },
   variants: {
     extend: {},

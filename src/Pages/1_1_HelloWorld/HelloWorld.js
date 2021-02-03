@@ -382,6 +382,155 @@ const HelloWorld = () => (
                 </div>
             {`}`}
         </code>
+        <h3 className="text-3xl semibold text-raisinBlack pt-8">ESLint Setup</h3>
+        <p className="py-4"></p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+            npm install --save-dev eslint-loader
+        </code>
+        <p className="py-4">
+        </p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+            {`const HtmlWebPackPlugin = require("html-webpack-plugin");`}
+            <br />
+            {`const MiniCssExtractPlugin = require("mini-css-extract-plugin");`}
+            <br />
+            <br />
+            {`module.exports = {`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {`module: {`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`rules: [`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`{`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`test: /\.js$/,`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`exclude: /node_modules/,`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`use: [`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`"babel-loader",`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`"eslint-loader"`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`]`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`},`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`{`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`test: /\.css$/,`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`use: [`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`MiniCssExtractPlugin.loader,`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`"css-loader", "postcss-loader",`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`]`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`}`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`]`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {`},`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {`plugins: [`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`new MiniCssExtractPlugin({`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`filename: "styles.css",`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`chunkFilename: "styles.css"`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`}),`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`new HtmlWebPackPlugin({`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`template: "./src/index.html",`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`filename: "./index.html"`}
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`})`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {`]`}
+            <br/>
+            {`};`}
+        </code>
+        <p className="py-4">            
+        </p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+            touch .eslintrc
+        </code>
+        <p className="py-4">            
+        </p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+            npm install --save-dev babel-eslint
+        </code>
+        <p className="py-4">
+            
+        </p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+            npx install-peerdeps --dev eslint-config-airbnb
+        </code>
+        <p className="py-4">
+            
+        </p>
+        <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
+        {`{`}
+            <div className="px-4">
+                "parser": "babel-eslint",
+                <br/>
+                "extends": ["airbnb"],
+                <br/>
+                {`"env: {`}
+                <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`"browser": true,`}
+                <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`"node": true`}
+                <br/>
+                {`}`}
+                <br/>
+                "rules": {`{`}
+                <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]`}
+                <br/>
+                {`}`}
+            </div>
+        {`}`}
+        </code>
         <h3 className="text-3xl semibold text-raisinBlack pt-8">Add Tailwind CSS</h3>
         <p className="py-4">
             This part is sort of optional. It's really just to make your life easier; this course isn't about your mad styling skills, after all, but rather your understanding of core React concepts. If you'd rather write your own
@@ -524,13 +673,16 @@ const HelloWorld = () => (
             {`exclude: /node_modules/,`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`use: {`}
+            {`use: [`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`loader: "babel-loader"`}
+            {`"babel-loader",`}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {`"eslint-loader"`}
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`}`}
+            {`]`}
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {`},`}
@@ -645,7 +797,7 @@ const HelloWorld = () => (
             {`<div>`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {`<button className="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Message</button>`}
+            {`<button className="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-700 text-purple-700 hover:bg-purple-700 hover:text-white">Message</button>`}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {`</div>`}
@@ -688,7 +840,7 @@ const HelloWorld = () => (
                     <p className="text-sm leading-tight text-grey-dark">Developer at NothingWorks Inc.</p>
                 </div>
                 <div>
-                    <button className="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Message</button>
+                    <button className="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-700 text-purple-700 hover:bg-purple-700 hover:text-white">Message</button>
                 </div>
                 </div>
             </div>
@@ -759,7 +911,7 @@ const HelloWorld = () => (
         </p>
         <a rel="noopenner noreferrer" target="_blank" href="https://tailwindcss.com/" className="py-4 block text-dodgerBlue">Read up on Tailwind here </a>
         <p className="py-4">
-            Here's my "Hello World" 😸: 
+            Here's my "Hello World"<span role="img" aria-label="winking-cat-face"> 😸</span>: 
         </p>
         <div className="bg-white p-8 container text-center my-8 mx-auto max-w-lg shadow-lg rounded-lg overflow-hidden">
            <h1 className="text-5xl mb-12">Hello World!</h1>
