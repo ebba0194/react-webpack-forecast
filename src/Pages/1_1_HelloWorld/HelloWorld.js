@@ -10,7 +10,7 @@ const HelloWorld = () => (
             Here's a list of everything we're going to add to this minimal project setup:
         </p>
         <ul className="list-disc p-4 pt-0">
-            <li>webpack 4</li>
+            <li>webpack 5</li>
             <li>webpack-bundle-analyzer</li>
             <li>webpack-dev-server</li>
             <li>React 16</li>
