@@ -151,17 +151,6 @@ const HelloWorld = () => (
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             npm i babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/cli -D
         </code>
-        <p className="py-4">
-            We'll need to configure our Webpack setup to use Babel. We're telling Webpack that our
-            &nbsp; 
-            <code className="bg-ecru">.js</code>
-            &nbsp;
-            files contain React, and that we should load them via the 
-            &nbsp; 
-            <code className="bg-ecru">babel-loader</code>
-            &nbsp;
-            we just installed.
-        </p>
         <p className="py-4">Now we'll need a Babel configuration file. In your terminal, type: </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             touch .babelrc
@@ -252,7 +241,13 @@ const HelloWorld = () => (
             npm i html-webpack-plugin -D
         </code>
         <p className="py-4">
-            We'll also have to update our Webpack configuration:
+            We'll also have to update our Webpack configuration at 
+            &nbsp;
+            <code className="bg-ecru">
+            webpack.config.js
+            </code>
+            &nbsp;
+            :
         </p>
         <code className="py-4 bg-darkLiver text-ecru p-4 rounded block">
             {`const HtmlWebPackPlugin = require("html-webpack-plugin");`}
