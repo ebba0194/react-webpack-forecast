@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -11,12 +9,12 @@ module.exports = {
         darkLiver: '#564E58',
         isabelline: '#F2EFE9',
         raisinBlack: '#252627',
-        dodgerBlue: '#0496FF'
-      }
-    }
+        dodgerBlue: '#0496FF',
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
